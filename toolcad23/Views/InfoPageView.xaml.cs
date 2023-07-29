@@ -18,7 +18,7 @@ namespace toolcad23.Views
     /// <summary>
     /// Interaction logic for InfoPageView.xaml
     /// </summary>
-    public partial class InfoPageView : Page
+    public partial class InfoPageView : UserControl
     {
         public InfoPageView()
         {

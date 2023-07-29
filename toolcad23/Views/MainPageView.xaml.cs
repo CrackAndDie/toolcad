@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace toolcad23.Views.OtherViews
+namespace toolcad23.Views
 {
     /// <summary>
-    /// Interaction logic for MyMessageBox.xaml
+    /// Interaction logic for MainPageView.xaml
     /// </summary>
-    public partial class MyMessageBox : Window
+    public partial class MainPageView : UserControl
     {
-        public MyMessageBox()
+        public MainPageView()
         {
             InitializeComponent();
         }

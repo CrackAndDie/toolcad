@@ -18,7 +18,7 @@ namespace toolcad23.Views
     /// <summary>
     /// Interaction logic for DeliveryPageView.xaml
     /// </summary>
-    public partial class DeliveryPageView : Page
+    public partial class DeliveryPageView : UserControl
     {
         public DeliveryPageView()
         {

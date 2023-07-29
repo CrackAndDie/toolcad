@@ -1,4 +1,4 @@
-﻿<Page x:Class="toolcad23.Views.DeliveryPageView"
+﻿<UserControl x:Class="toolcad23.Views.DeliveryPageView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,14 +7,8 @@
       xmlns:deliveryViews="clr-namespace:toolcad23.Views.OtherViews.DeliveryViews"
       xmlns:viewModels="clr-namespace:toolcad23.ViewModels"
       xmlns:otherViews="clr-namespace:toolcad23.Views.OtherViews"
-      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="DeliveryPageView">
-
-    <Page.DataContext>
-        <viewModels:DeliveryPageViewModel/>
-    </Page.DataContext>
+      d:DesignHeight="450" d:DesignWidth="800">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -51,4 +45,4 @@
                                           SavePictureCommand="{Binding SavePictureCommand}"
                                           SavePictureParameter="{Binding ElementName=RandomGrid}"/>
     </Grid>
-</Page>
+</UserControl>

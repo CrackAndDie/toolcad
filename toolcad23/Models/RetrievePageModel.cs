@@ -130,7 +130,7 @@ namespace toolcad23.Models
                 return;
             }
 
-            WaiterHelper.AddWaiter();
+            // WaiterHelper.AddWaiter();
 
             Application.Current.Dispatcher.Invoke(() =>
             {
@@ -149,7 +149,7 @@ namespace toolcad23.Models
                 });
             });
 
-            WaiterHelper.RemoveWaiter();
+            // WaiterHelper.RemoveWaiter();
         }
 
         private void FillUpBitmapList(Dictionary<Vector2Int, string> standCubes, bool isGreen)

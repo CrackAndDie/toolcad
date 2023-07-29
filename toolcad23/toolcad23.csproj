@@ -40,18 +40,6 @@
     <ApplicationIcon>logo_tc23.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MaterialDesignColors, Version=2.1.2.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MaterialDesignColors.2.1.2\lib\net462\MaterialDesignColors.dll</HintPath>
-    </Reference>
-    <Reference Include="MaterialDesignThemes.Wpf, Version=4.8.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MaterialDesignThemes.4.8.0\lib\net462\MaterialDesignThemes.Wpf.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
-    </Reference>
-    <Reference Include="Prism, Version=8.1.97.5141, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.Core.8.1.97\lib\net47\Prism.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -73,19 +61,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Localization\Gui.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gui.resx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Classes\CubeTypeEnum.cs" />
     <Compile Include="Models\DeliveryPageModel.cs" />
     <Compile Include="Models\Helpers\Functions.cs" />
-    <Compile Include="Models\MessageBoxFactory.cs" />
-    <Compile Include="Models\MyExtensions.cs" />
+    <Compile Include="Models\ListExtensions.cs" />
     <Compile Include="Models\Helpers\RandomHelper.cs" />
     <Compile Include="Models\RetrievePageModel.cs" />
-    <Compile Include="Models\UIFactory.cs" />
     <Compile Include="Models\Classes\Vector2Int.cs" />
-    <Compile Include="Models\Helpers\WaiterHelper.cs" />
+    <Compile Include="Modules\MainModule.cs" />
+    <Compile Include="Modules\MainPageModule.cs" />
     <Compile Include="ViewModels\DeliveryPageViewModel.cs" />
-    <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Compile Include="ViewModels\OtherViewModels\MyMessageBoxViewModel.cs" />
+    <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\RetrievePageViewModel.cs" />
     <Compile Include="Views\DeliveryPageView.xaml.cs">
       <DependentUpon>DeliveryPageView.xaml</DependentUpon>
@@ -93,14 +84,11 @@
     <Compile Include="Views\InfoPageView.xaml.cs">
       <DependentUpon>InfoPageView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MainPageView.xaml.cs">
+      <DependentUpon>MainPageView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\OtherViews\DeliveryViews\DeliveryControlView.xaml.cs">
       <DependentUpon>DeliveryControlView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\OtherViews\MyMessageBox.xaml.cs">
-      <DependentUpon>MyMessageBox.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\OtherViews\PreviewWindowView.xaml.cs">
-      <DependentUpon>PreviewWindowView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\OtherViews\RetrieveViews\RetrieveControlView.xaml.cs">
       <DependentUpon>RetrieveControlView.xaml</DependentUpon>
@@ -108,22 +96,15 @@
     <Compile Include="Views\OtherViews\RightPanelControlView.xaml.cs">
       <DependentUpon>RightPanelControlView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\OtherViews\WindowHeaderView.xaml.cs">
-      <DependentUpon>WindowHeaderView.xaml</DependentUpon>
+    <Compile Include="Views\PreviewWindowView.xaml.cs">
+      <DependentUpon>PreviewWindowView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\InternalRegions.cs" />
     <Compile Include="Views\RetrievePageView.xaml.cs">
       <DependentUpon>RetrievePageView.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\DeliveryPageView.xaml">
@@ -134,15 +115,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\MainPageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\OtherViews\DeliveryViews\DeliveryControlView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\OtherViews\MyMessageBox.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\OtherViews\PreviewWindowView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -154,7 +131,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\OtherViews\WindowHeaderView.xaml">
+    <Page Include="Views\PreviewWindowView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -177,11 +154,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Localization\Gui.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Gui.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\Gui.ru.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -240,9 +221,11 @@
     <Resource Include="logo_tc23.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\cad_video_2.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <PackageReference Include="Abdrakov.Solutions">
+      <Version>1.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+    <PackageReference Include="Prism.Unity" Version="8.1.97" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.8.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.8.0\build\MaterialDesignThemes.targets')" />

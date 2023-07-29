@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace toolcad23.Models
 {
-    internal static class MyExtensions
+    internal static class ListExtensions
     {
         public static void Shuffle<T>(this IList<T> list)
         {

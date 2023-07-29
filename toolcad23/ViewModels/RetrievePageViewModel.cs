@@ -67,7 +67,7 @@ namespace toolcad23.ViewModels
             model.PropertyChanged += (s, a) => { RaisePropertyChanged(a.PropertyName); };
             model.ProblemRaised += (s, a) => 
             {
-                MessageBoxFactory.Show(a);
+                // MessageBoxFactory.Show(a);
             };
 
             SavePictureCommand = new DelegateCommand<object>((obj) =>

@@ -18,7 +18,7 @@ namespace toolcad23.Views
     /// <summary>
     /// Interaction logic for RetrievePageView.xaml
     /// </summary>
-    public partial class RetrievePageView : Page
+    public partial class RetrievePageView : UserControl
     {
         public RetrievePageView()
         {

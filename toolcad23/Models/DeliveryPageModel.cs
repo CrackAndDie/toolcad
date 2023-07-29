@@ -108,7 +108,7 @@ namespace toolcad23.Models
                 return;
             }
 
-            WaiterHelper.AddWaiter();
+            // WaiterHelper.AddWaiter();
 
             Application.Current.Dispatcher.Invoke(() =>
             {
@@ -125,7 +125,7 @@ namespace toolcad23.Models
                 });
             });
 
-            WaiterHelper.RemoveWaiter();
+            // WaiterHelper.RemoveWaiter();
         }
 
         private void FillUpLists(List<List<string>> strings)
