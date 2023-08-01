@@ -1,11 +1,6 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
-using System;
 using System.Collections.ObjectModel;
-using System.IO;
-using System.Runtime.InteropServices;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -65,7 +60,7 @@ namespace toolcad23.ViewModels
         {
             model = new RetrievePageModel();
             model.PropertyChanged += (s, a) => { RaisePropertyChanged(a.PropertyName); };
-            model.ProblemRaised += (s, a) => 
+            model.ProblemRaised += (s, a) =>
             {
                 // MessageBoxFactory.Show(a);
             };

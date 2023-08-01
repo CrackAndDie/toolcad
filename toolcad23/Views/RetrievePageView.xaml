@@ -1,50 +1,87 @@
 ﻿<UserControl x:Class="toolcad23.Views.RetrievePageView"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:local="clr-namespace:toolcad23.Views"
-      xmlns:retrieveViews="clr-namespace:toolcad23.Views.OtherViews.RetrieveViews"
-      xmlns:viewModels="clr-namespace:toolcad23.ViewModels"
-      xmlns:otherViews="clr-namespace:toolcad23.Views.OtherViews"
-      mc:Ignorable="d"
-      d:DesignHeight="450"
-      d:DesignWidth="800">
-    
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:toolcad23.Views"
+             xmlns:retrieveViews="clr-namespace:toolcad23.Views.OtherViews.RetrieveViews"
+             xmlns:viewModels="clr-namespace:toolcad23.ViewModels"
+             xmlns:otherViews="clr-namespace:toolcad23.Views.OtherViews"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             d:DataContext="{d:DesignInstance viewModels:RetrievePageViewModel}"
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="800">
+
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="0.3*" />
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0" x:Name="RandomGrid">
+        <Grid Grid.Column="0"
+              x:Name="RandomGrid">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Border Background="Transparent" BorderThickness="2" BorderBrush="#9a67ea" CornerRadius="14" Grid.Column="0" Grid.Row="0" Margin="12"/>
-            <Border Background="Transparent" BorderThickness="2" BorderBrush="#9a67ea" CornerRadius="14" Grid.Column="1" Grid.Row="0" Margin="12"/>
-            <Border Background="Transparent" BorderThickness="2" BorderBrush="#9a67ea" CornerRadius="14" Grid.Column="0" Grid.Row="1" Margin="12"/>
-            <Border Background="Transparent" BorderThickness="2" BorderBrush="#9a67ea" CornerRadius="14" Grid.Column="1" Grid.Row="1" Margin="12"/>
+            <Border Background="Transparent"
+                    BorderThickness="2"
+                    BorderBrush="#9a67ea"
+                    CornerRadius="14"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Margin="12" />
+            <Border Background="Transparent"
+                    BorderThickness="2"
+                    BorderBrush="#9a67ea"
+                    CornerRadius="14"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Margin="12" />
+            <Border Background="Transparent"
+                    BorderThickness="2"
+                    BorderBrush="#9a67ea"
+                    CornerRadius="14"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Margin="12" />
+            <Border Background="Transparent"
+                    BorderThickness="2"
+                    BorderBrush="#9a67ea"
+                    CornerRadius="14"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Margin="12" />
 
-            <retrieveViews:RetrieveControlView Grid.Column="0" Grid.Row="0" Margin="18" 
-                                               GreenStandCubesCollection="{Binding GreenStandCubes1}" 
-                                               RedStandCubesCollection="{Binding RedStandCubes1}"/>
-            <retrieveViews:RetrieveControlView Grid.Column="1" Grid.Row="0" Margin="18"
-                                               GreenStandCubesCollection="{Binding GreenStandCubes2}" 
-                                               RedStandCubesCollection="{Binding RedStandCubes2}"/>
-            <retrieveViews:RetrieveControlView Grid.Column="0" Grid.Row="1" Margin="18"
-                                               GreenStandCubesCollection="{Binding GreenStandCubes3}" 
-                                               RedStandCubesCollection="{Binding RedStandCubes3}"/>
-            <retrieveViews:RetrieveControlView Grid.Column="1" Grid.Row="1" Margin="18"
-                                               GreenStandCubesCollection="{Binding GreenStandCubes4}" 
-                                               RedStandCubesCollection="{Binding RedStandCubes4}"/>
+            <retrieveViews:RetrieveControlView Grid.Column="0"
+                                               Grid.Row="0"
+                                               Margin="18"
+                                               GreenStandCubesCollection="{Binding GreenStandCubes1}"
+                                               RedStandCubesCollection="{Binding RedStandCubes1}" />
+            <retrieveViews:RetrieveControlView Grid.Column="1"
+                                               Grid.Row="0"
+                                               Margin="18"
+                                               GreenStandCubesCollection="{Binding GreenStandCubes2}"
+                                               RedStandCubesCollection="{Binding RedStandCubes2}" />
+            <retrieveViews:RetrieveControlView Grid.Column="0"
+                                               Grid.Row="1"
+                                               Margin="18"
+                                               GreenStandCubesCollection="{Binding GreenStandCubes3}"
+                                               RedStandCubesCollection="{Binding RedStandCubes3}" />
+            <retrieveViews:RetrieveControlView Grid.Column="1"
+                                               Grid.Row="1"
+                                               Margin="18"
+                                               GreenStandCubesCollection="{Binding GreenStandCubes4}"
+                                               RedStandCubesCollection="{Binding RedStandCubes4}" />
         </Grid>
-        <otherViews:RightPanelControlView Grid.Column="1" VerticalAlignment="Center"
+        <otherViews:RightPanelControlView Grid.Column="1"
+                                          VerticalAlignment="Center"
                                           YellowText="{Binding YellowText, Mode=TwoWay}"
                                           WhiteText="{Binding WhiteText, Mode=TwoWay}"
                                           BlueText="{Binding BlueText, Mode=TwoWay}"
@@ -52,6 +89,6 @@
                                           MaxGreenText="{Binding MaxGreenText, Mode=TwoWay}"
                                           RandomizeCommand="{Binding RandomizeCommand}"
                                           SavePictureCommand="{Binding SavePictureCommand}"
-                                          SavePictureParameter="{Binding ElementName=RandomGrid}"/>
+                                          SavePictureParameter="{Binding ElementName=RandomGrid}" />
     </Grid>
 </UserControl>

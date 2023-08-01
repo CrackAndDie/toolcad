@@ -4,25 +4,49 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:toolcad23.Views.OtherViews"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="650" d:DesignWidth="210" x:Name="rightPanelControlView">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/toolcad23;component/Styles/CommonStyles.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
     <StackPanel>
         <TextBox Style="{StaticResource InputBoxRounded}" Margin="14, 10" Text="{Binding YellowText, ElementName=rightPanelControlView, Mode=TwoWay}"
-                     HorizontalAlignment="Stretch" MaxLength="1" Padding="6" MaxWidth="200"
-                     BorderThickness="2" BorderBrush="#9a67ea"/>
+                 HorizontalAlignment="Stretch" MaxLength="1" Padding="6" MaxWidth="200"
+                 BorderThickness="2"
+                 BorderBrush="#9a67ea"
+                 materialDesign:HintAssist.FloatingOffset="0,-30"
+                 materialDesign:HintAssist.Hint="Кол-во жёлтых" />
         <TextBox Style="{StaticResource InputBoxRounded}" Margin="14, 10" Text="{Binding WhiteText, ElementName=rightPanelControlView, Mode=TwoWay}"
-                     HorizontalAlignment="Stretch" MaxLength="1" Padding="6" MaxWidth="200"
-                     BorderThickness="2" BorderBrush="#9a67ea"/>
+                 HorizontalAlignment="Stretch" MaxLength="1" Padding="6" MaxWidth="200"
+                 BorderThickness="2"
+                 BorderBrush="#9a67ea"
+                 materialDesign:HintAssist.FloatingOffset="0,-30"
+                 materialDesign:HintAssist.Hint="Кол-во белых" />
         <TextBox Style="{StaticResource InputBoxRounded}" Margin="14, 10, 14, 35" Text="{Binding BlueText, ElementName=rightPanelControlView, Mode=TwoWay}"
-                     HorizontalAlignment="Stretch" MaxLength="1" Padding="6" MaxWidth="200"
-                     BorderThickness="2" BorderBrush="#9a67ea"/>
+                 HorizontalAlignment="Stretch" MaxLength="1" Padding="6" MaxWidth="200"
+                 BorderThickness="2"
+                 BorderBrush="#9a67ea"
+                 materialDesign:HintAssist.FloatingOffset="0,-30"
+                 materialDesign:HintAssist.Hint="Кол-во синих" />
 
         <TextBox Style="{StaticResource InputBoxRounded}" Margin="14, 10" Text="{Binding MaxRedText, ElementName=rightPanelControlView, Mode=TwoWay}"
-                     HorizontalAlignment="Stretch" MaxLength="1" Padding="6" MaxWidth="200"
-                     BorderThickness="2" BorderBrush="#9a67ea"/>
+                 HorizontalAlignment="Stretch" MaxLength="1" Padding="6" MaxWidth="200"
+                 BorderThickness="2"
+                 BorderBrush="#9a67ea"
+                 materialDesign:HintAssist.FloatingOffset="0,-30"
+                 materialDesign:HintAssist.Hint="MAX на красном" />
         <TextBox Style="{StaticResource InputBoxRounded}" Margin="14, 10, 14, 35" Text="{Binding MaxGreenText, ElementName=rightPanelControlView, Mode=TwoWay}"
-                     HorizontalAlignment="Stretch" MaxLength="1" Padding="6" MaxWidth="200"
-                     BorderThickness="2" BorderBrush="#9a67ea"/>
+                 HorizontalAlignment="Stretch" MaxLength="1" Padding="6" MaxWidth="200"
+                 BorderThickness="2"
+                 BorderBrush="#9a67ea"
+                 materialDesign:HintAssist.FloatingOffset="0,-30"
+                 materialDesign:HintAssist.Hint="MAX на зеленом" />
 
         <Button Style="{StaticResource ButtonRounded}" Content="Зарандомить" Margin="14, 10" MaxWidth="200" Command="{Binding RandomizeCommand, ElementName=rightPanelControlView}"/>
 
@@ -32,7 +56,9 @@
                 Height="50"
                 Command="{Binding SavePictureCommand, ElementName=rightPanelControlView}"
                 CommandParameter="{Binding SavePictureParameter, ElementName=rightPanelControlView}">
-            
+            <materialDesign:PackIcon Kind="PanoramaVariantOutline"
+                                     Width="34"
+                                     Height="34" />
         </Button>
     </StackPanel>
 </UserControl>

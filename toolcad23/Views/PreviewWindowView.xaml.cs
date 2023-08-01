@@ -1,22 +1,11 @@
 ﻿using Abdrakov.Engine.Interfaces.Presentation;
-using Abdrakov.Engine.MVVM.Events;
 using Abdrakov.Engine.MVVM;
+using Abdrakov.Engine.MVVM.Events;
 using Prism.Events;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Windows.Threading;
 using Prism.Ioc;
+using System;
+using System.Windows;
+using System.Windows.Threading;
 
 namespace toolcad23.Views
 {
@@ -30,7 +19,7 @@ namespace toolcad23.Views
 
             timer = new DispatcherTimer()
             {
-                Interval = TimeSpan.FromSeconds(4),
+                Interval = TimeSpan.FromSeconds(1),
             };
             timer.Tick += (s, a) => { CallPreviewDoneEvent(); };
             timer.Start();

@@ -5,13 +5,20 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:toolcad23.Views"
              xmlns:viewModels="clr-namespace:toolcad23.ViewModels"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
              d:DataContext="{d:DesignInstance viewModels:MainPageViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    
-    <Border >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Border>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -20,11 +27,92 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="46" />
             </Grid.RowDefinitions>
-            
-            
+
+            <Rectangle Fill="{DynamicResource PrimaryBrush}"/>
 
             <ContentControl prism:RegionManager.RegionName="{x:Static local:InternalRegions.MAIN_PAGE_REGION}"
                             prism:RegionManager.RegionManager="{Binding RegionManager}" />
+
+            <materialDesign:Card Grid.Row="1">
+                <TabControl HorizontalContentAlignment="Center"
+                            materialDesign:NavigationRailAssist.SelectionCornerRadius="5"
+                            materialDesign:NavigationRailAssist.ShowSelectionBackground="True"
+                            Background="{DynamicResource SecondaryBrush}"
+                            Style="{StaticResource MaterialDesignNavigationRailTabControl}"
+                            x:Name="MyTabControl"
+                            TabStripPlacement="Top"
+                            SelectedIndex="{Binding SelectedTabIndex, Mode=TwoWay}">
+                    <TabItem Width="110"
+                             Height="38"
+                             Margin="0, 4">
+                        <TabItem.Header>
+                            <StackPanel Width="auto"
+                                        Height="auto"
+                                        Orientation="Horizontal">
+                                <materialDesign:PackIcon Width="26"
+                                                         Height="26"
+                                                         HorizontalAlignment="Center"
+                                                         Kind="InformationOutline" />
+                                <TextBlock HorizontalAlignment="Center"
+                                           Text="Главная"
+                                           FontSize="18"
+                                           Margin="4, 0" />
+                            </StackPanel>
+                        </TabItem.Header>
+                    </TabItem>
+                    <TabItem Width="130"
+                             Height="38">
+                        <TabItem.Header>
+                            <StackPanel Width="auto"
+                                        Height="auto"
+                                        Orientation="Horizontal">
+                                <materialDesign:PackIcon Width="26"
+                                                         Height="26"
+                                                         HorizontalAlignment="Center"
+                                                         Kind="BoomGateArrowUpOutline" />
+                                <TextBlock HorizontalAlignment="Center"
+                                           Text="Вывоз"
+                                           FontSize="18"
+                                           Margin="4, 0" />
+                            </StackPanel>
+                        </TabItem.Header>
+                    </TabItem>
+                    <TabItem Width="130"
+                             Height="38">
+                        <TabItem.Header>
+                            <StackPanel Width="auto"
+                                        Height="auto"
+                                        Orientation="Horizontal">
+                                <materialDesign:PackIcon Width="26"
+                                                         Height="26"
+                                                         HorizontalAlignment="Center"
+                                                         Kind="BoomGateArrowDownOutline" />
+                                <TextBlock HorizontalAlignment="Center"
+                                           Text="Завоз"
+                                           FontSize="18"
+                                           Margin="4, 0" />
+                            </StackPanel>
+                        </TabItem.Header>
+                    </TabItem>
+                    <TabItem Width="0"
+                             Height="0"
+                             Visibility="Collapsed">
+                        <TabItem.Header>
+                            <StackPanel Width="auto"
+                                        Height="auto">
+                                <materialDesign:PackIcon Width="26"
+                                                         Height="26"
+                                                         HorizontalAlignment="Center"
+                                                         Kind="KeyLink" />
+                                <TextBlock HorizontalAlignment="Center"
+                                           Text="Другое"
+                                           FontSize="18"
+                                           Margin="4, 0" />
+                            </StackPanel>
+                        </TabItem.Header>
+                    </TabItem>
+                </TabControl>
+            </materialDesign:Card>
         </Grid>
     </Border>
 </UserControl>

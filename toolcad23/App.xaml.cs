@@ -1,25 +1,20 @@
 ﻿using Abdrakov.CommonWPF.Views;
-using Abdrakov.Engine.Interfaces.Presentation;
 using Abdrakov.Engine.Interfaces;
-using Abdrakov.Engine.Localization.Extensions;
+using Abdrakov.Engine.Interfaces.Presentation;
 using Abdrakov.Engine.Localization;
+using Abdrakov.Engine.Localization.Extensions;
 using Abdrakov.Engine.MVVM;
 using Abdrakov.Engine.Utils.Settings;
+using Abdrakov.Styles;
 using Abdrakov.Styles.Interfaces;
 using Abdrakov.Styles.Other;
 using Abdrakov.Styles.Services;
-using Abdrakov.Styles;
 using Prism.Ioc;
 using Prism.Modularity;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Configuration;
-using System.Data;
-using System.Linq;
 using System.Reflection;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
 using toolcad23.Modules;
@@ -79,6 +74,8 @@ namespace toolcad23
             moduleCatalog.AddModule<MainPageModule>();
         }
 
+        private static readonly Color _secondary = Color.FromRgb(131, 113, 189);
+
         private void ConfigureApplicationVisual()
         {
             Resources.MergedDictionaries.Add(new AbdrakovBundledTheme()
@@ -87,9 +84,11 @@ namespace toolcad23
                 ExtendedColors = new Dictionary<string, ColorPair>()
                 {
                     { "TextForeground", new ColorPair(Colors.AliceBlue, Colors.Black) },
-                    { "WindowStatus", new ColorPair(Colors.DarkViolet, Colors.DarkViolet) },
+                    { "WindowStatus", new ColorPair(_secondary, _secondary) },
                     { "Window", new ColorPair(Color.FromRgb(64, 64, 64), Color.FromRgb(254, 254, 254)) },
 
+                    { "Primary", new ColorPair(Color.FromRgb(44, 44, 44), Color.FromRgb(234, 234, 234)) },
+                    { "Secondary", new ColorPair(_secondary, _secondary) },
                 }
             }.SetTheme());
         }

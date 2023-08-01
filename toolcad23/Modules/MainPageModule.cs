@@ -1,12 +1,8 @@
-﻿using Abdrakov.CommonWPF.Views;
+﻿using Abdrakov.Engine.Extensions;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using toolcad23.Interfaces;
 using toolcad23.Views;
 
 namespace toolcad23.Modules
@@ -22,9 +18,9 @@ namespace toolcad23.Modules
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<InfoPageView>();
-            containerRegistry.RegisterForNavigation<DeliveryPageView>();
-            containerRegistry.RegisterForNavigation<RetrievePageView>();
+            containerRegistry.RegisterForNavigation<IInfoView, InfoPageView>();
+            containerRegistry.RegisterForNavigation<IDeliveryView, DeliveryPageView>();
+            containerRegistry.RegisterForNavigation<IRetrieveView, RetrievePageView>();
         }
     }
 }

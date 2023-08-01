@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace toolcad23.Models.Classes
+﻿namespace toolcad23.Models.Classes
 {
     internal class Vector2Int
     {
@@ -13,7 +7,7 @@ namespace toolcad23.Models.Classes
 
         internal Vector2Int(int x, int y)
         {
-            X = x; 
+            X = x;
             Y = y;
         }
     }
