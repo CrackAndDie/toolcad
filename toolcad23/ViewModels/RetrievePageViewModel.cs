@@ -1,5 +1,7 @@
-﻿using Prism.Commands;
+﻿using Abdrakov.Engine.MVVM;
+using Prism.Commands;
 using Prism.Mvvm;
+using Prism.Regions;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -9,7 +11,7 @@ using toolcad23.Models.Helpers;
 
 namespace toolcad23.ViewModels
 {
-    internal class RetrievePageViewModel : BindableBase
+    internal class RetrievePageViewModel : ViewModelBase
     {
         private readonly RetrievePageModel model;
         public ReadOnlyObservableCollection<BitmapImage> GreenStandCubes1 => model.GreenStandCubes1;
@@ -20,6 +22,8 @@ namespace toolcad23.ViewModels
         public ReadOnlyObservableCollection<BitmapImage> RedStandCubes3 => model.RedStandCubes3;
         public ReadOnlyObservableCollection<BitmapImage> GreenStandCubes4 => model.GreenStandCubes4;
         public ReadOnlyObservableCollection<BitmapImage> RedStandCubes4 => model.RedStandCubes4;
+
+        public override bool IsNavigationTarget(NavigationContext navigationContext) => true;
 
         public int YellowText
         {

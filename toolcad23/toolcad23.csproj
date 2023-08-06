@@ -110,6 +110,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Styles\ComboBoxStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\CommonStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -228,14 +232,16 @@
     <Resource Include="logo_tc23.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Abdrakov.Solutions">
-      <Version>1.0.8</Version>
-    </PackageReference>
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
     <PackageReference Include="Prism.Unity" Version="8.1.97" />
     <PackageReference Include="MaterialDesignColors" Version="2.1.2" />
     <PackageReference Include="MaterialDesignThemes" Version="4.8.0" />
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+    <PackageReference Include="Abdrakov.Solutions" Version="1.0.9" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\AbdrakovSolutions.png" />
+    <Resource Include="Resources\logo_sv.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

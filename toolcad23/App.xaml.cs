@@ -74,7 +74,13 @@ namespace toolcad23
             moduleCatalog.AddModule<MainPageModule>();
         }
 
-        private static readonly Color _secondary = Color.FromRgb(131, 113, 189);
+        private static readonly Color _secondary = Color.FromRgb(135, 126, 189);
+        private static readonly Color _secondaryDark = Color.FromRgb(66, 58, 102);
+        private static readonly Color _secondaryHover = Color.FromRgb(121, 103, 179);
+        private static readonly Color _secondaryHoverDark = Color.FromRgb(131, 113, 189);
+
+        private static readonly Color _third = Color.FromRgb(60, 102, 82);
+        private static readonly Color _thirdDark = Color.FromRgb(103, 201, 150);
 
         private void ConfigureApplicationVisual()
         {
@@ -87,8 +93,10 @@ namespace toolcad23
                     { "WindowStatus", new ColorPair(_secondary, _secondary) },
                     { "Window", new ColorPair(Color.FromRgb(64, 64, 64), Color.FromRgb(254, 254, 254)) },
 
-                    { "Primary", new ColorPair(Color.FromRgb(44, 44, 44), Color.FromRgb(234, 234, 234)) },
-                    { "Secondary", new ColorPair(_secondary, _secondary) },
+                    { "Primary", new ColorPair(Color.FromRgb(44, 44, 44), Color.FromRgb(214, 214, 214)) },
+                    { "Secondary", new ColorPair(_secondaryDark, _secondary) },
+                    { "SecondaryHover", new ColorPair(_secondaryHoverDark, _secondaryHover) },
+                    { "Third", new ColorPair(_thirdDark, _third) },
                 }
             }.SetTheme());
         }

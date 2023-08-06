@@ -59,5 +59,95 @@ namespace toolcad23.Localization {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Powered by: .
+        /// </summary>
+        internal static string InfoPage_PoweredBy {
+            get {
+                return ResourceManager.GetString("InfoPage.PoweredBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deliver.
+        /// </summary>
+        internal static string MainPage_Deliver {
+            get {
+                return ResourceManager.GetString("MainPage.Deliver", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lobby.
+        /// </summary>
+        internal static string MainPage_Lobby {
+            get {
+                return ResourceManager.GetString("MainPage.Lobby", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retrieve.
+        /// </summary>
+        internal static string MainPage_Retrieve {
+            get {
+                return ResourceManager.GetString("MainPage.Retrieve", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blue amount.
+        /// </summary>
+        internal static string RightPanel_BlueAmount {
+            get {
+                return ResourceManager.GetString("RightPanel.BlueAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MAX on green.
+        /// </summary>
+        internal static string RightPanel_MaxGreen {
+            get {
+                return ResourceManager.GetString("RightPanel.MaxGreen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MAX on red.
+        /// </summary>
+        internal static string RightPanel_MaxRed {
+            get {
+                return ResourceManager.GetString("RightPanel.MaxRed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Randomize.
+        /// </summary>
+        internal static string RightPanel_Randomize {
+            get {
+                return ResourceManager.GetString("RightPanel.Randomize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to White amount.
+        /// </summary>
+        internal static string RightPanel_WhiteAmount {
+            get {
+                return ResourceManager.GetString("RightPanel.WhiteAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yellow amount.
+        /// </summary>
+        internal static string RightPanel_YellowAmount {
+            get {
+                return ResourceManager.GetString("RightPanel.YellowAmount", resourceCulture);
+            }
+        }
     }
 }

@@ -106,9 +106,10 @@
                 <ColumnDefinition Width="0.3*" />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <ToggleButton Content="{materialDesign:PackIcon Kind=SwapHorizontal, Size=20}"
-                          Foreground="AliceBlue"
-                          Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"
+            <ToggleButton Content="{materialDesign:PackIcon Kind=LockOutline, Size=20}"
+                          Style="{StaticResource MaterialDesignActionToggleButton}"
+                          Foreground="{DynamicResource TextForegroundBrush}"
+                          Background="{DynamicResource PrimaryBrush}"
                           ToolTip="Swap stands"
                           IsChecked="False"
                           Grid.Row="1"
@@ -116,7 +117,8 @@
                           Height="26"
                           Width="26"
                           Unchecked="ToggleButton_Unchecked"
-                          x:Name="SwapToggle" />
+                          x:Name="SwapToggle"
+                          materialDesign:ToggleButtonAssist.OnContent="{materialDesign:PackIcon Kind=LockOpenOutline}"/>
         </Grid>
     </Grid>
 </UserControl>

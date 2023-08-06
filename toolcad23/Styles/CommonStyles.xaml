@@ -44,9 +44,9 @@
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="borderInside"
                             CornerRadius="4"
-                            BorderThickness="1"
+                            BorderThickness="2"
                             Background="Transparent"
-                            BorderBrush="#FF85E7B4">
+                            BorderBrush="{DynamicResource ThirdBrush}">
                         <ContentPresenter x:Name="contentPresenter"
                                           ContentTemplate="{TemplateBinding ContentTemplate}"
                                           Content="{TemplateBinding Content}"
@@ -62,10 +62,10 @@
                                     Value="Transparent" />
                             <Setter Property="BorderThickness"
                                     TargetName="borderInside"
-                                    Value="1" />
+                                    Value="2" />
                             <Setter Property="BorderBrush"
                                     TargetName="borderInside"
-                                    Value="#FF85E7B4" />
+                                    Value="{DynamicResource ThirdBrush}" />
                         </Trigger>
                         <Trigger Property="IsMouseOver"
                                  Value="true">
@@ -74,10 +74,10 @@
                                     Value="Transparent" />
                             <Setter Property="BorderThickness"
                                     TargetName="borderInside"
-                                    Value="2" />
+                                    Value="3" />
                             <Setter Property="BorderBrush"
                                     TargetName="borderInside"
-                                    Value="#FF85E7B4" />
+                                    Value="{DynamicResource ThirdBrush}" />
                         </Trigger>
                         <Trigger Property="IsPressed"
                                  Value="true">
@@ -89,7 +89,7 @@
                                     Value="3" />
                             <Setter Property="BorderBrush"
                                     TargetName="borderInside"
-                                    Value="#FF85E7B4" />
+                                    Value="{DynamicResource ThirdBrush}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

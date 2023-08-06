@@ -19,36 +19,44 @@
         <TextBox Style="{StaticResource InputBoxRounded}" Margin="14, 10" Text="{Binding YellowText, ElementName=rightPanelControlView, Mode=TwoWay}"
                  HorizontalAlignment="Stretch" MaxLength="1" Padding="6" MaxWidth="200"
                  BorderThickness="2"
-                 BorderBrush="#9a67ea"
+                 BorderBrush="{DynamicResource SecondaryBrush}"
+                 Foreground="{DynamicResource TextForegroundBrush}"
                  materialDesign:HintAssist.FloatingOffset="0,-30"
-                 materialDesign:HintAssist.Hint="Кол-во жёлтых" />
+                 materialDesign:HintAssist.Hint="{LocalizedResource RightPanel.YellowAmount}" />
         <TextBox Style="{StaticResource InputBoxRounded}" Margin="14, 10" Text="{Binding WhiteText, ElementName=rightPanelControlView, Mode=TwoWay}"
                  HorizontalAlignment="Stretch" MaxLength="1" Padding="6" MaxWidth="200"
                  BorderThickness="2"
-                 BorderBrush="#9a67ea"
+                 BorderBrush="{DynamicResource SecondaryBrush}"
+                 Foreground="{DynamicResource TextForegroundBrush}"
                  materialDesign:HintAssist.FloatingOffset="0,-30"
-                 materialDesign:HintAssist.Hint="Кол-во белых" />
+                 materialDesign:HintAssist.Hint="{LocalizedResource RightPanel.WhiteAmount}" />
         <TextBox Style="{StaticResource InputBoxRounded}" Margin="14, 10, 14, 35" Text="{Binding BlueText, ElementName=rightPanelControlView, Mode=TwoWay}"
                  HorizontalAlignment="Stretch" MaxLength="1" Padding="6" MaxWidth="200"
                  BorderThickness="2"
-                 BorderBrush="#9a67ea"
+                 BorderBrush="{DynamicResource SecondaryBrush}"
+                 Foreground="{DynamicResource TextForegroundBrush}"
                  materialDesign:HintAssist.FloatingOffset="0,-30"
-                 materialDesign:HintAssist.Hint="Кол-во синих" />
+                 materialDesign:HintAssist.Hint="{LocalizedResource RightPanel.BlueAmount}" />
 
         <TextBox Style="{StaticResource InputBoxRounded}" Margin="14, 10" Text="{Binding MaxRedText, ElementName=rightPanelControlView, Mode=TwoWay}"
                  HorizontalAlignment="Stretch" MaxLength="1" Padding="6" MaxWidth="200"
                  BorderThickness="2"
-                 BorderBrush="#9a67ea"
+                 BorderBrush="{DynamicResource SecondaryBrush}"
+                 Foreground="{DynamicResource TextForegroundBrush}"
                  materialDesign:HintAssist.FloatingOffset="0,-30"
-                 materialDesign:HintAssist.Hint="MAX на красном" />
+                 materialDesign:HintAssist.Hint="{LocalizedResource RightPanel.MaxRed}" />
         <TextBox Style="{StaticResource InputBoxRounded}" Margin="14, 10, 14, 35" Text="{Binding MaxGreenText, ElementName=rightPanelControlView, Mode=TwoWay}"
                  HorizontalAlignment="Stretch" MaxLength="1" Padding="6" MaxWidth="200"
                  BorderThickness="2"
-                 BorderBrush="#9a67ea"
+                 BorderBrush="{DynamicResource SecondaryBrush}"
+                 Foreground="{DynamicResource TextForegroundBrush}"
                  materialDesign:HintAssist.FloatingOffset="0,-30"
-                 materialDesign:HintAssist.Hint="MAX на зеленом" />
+                 materialDesign:HintAssist.Hint="{LocalizedResource RightPanel.MaxGreen}" />
 
-        <Button Style="{StaticResource ButtonRounded}" Content="Зарандомить" Margin="14, 10" MaxWidth="200" Command="{Binding RandomizeCommand, ElementName=rightPanelControlView}"/>
+        <Button Style="{StaticResource ButtonRounded}"
+                Content="{LocalizedResource RightPanel.Randomize}" Margin="14, 10" MaxWidth="200"
+                Command="{Binding RandomizeCommand, ElementName=rightPanelControlView}"
+                Foreground="{DynamicResource TextForegroundBrush}"/>
 
         <Button Style="{StaticResource ButtonRounded}"
                 Margin="14, 10"
@@ -58,7 +66,8 @@
                 CommandParameter="{Binding SavePictureParameter, ElementName=rightPanelControlView}">
             <materialDesign:PackIcon Kind="PanoramaVariantOutline"
                                      Width="34"
-                                     Height="34" />
+                                     Height="34"
+                                     Foreground="{DynamicResource TextForegroundBrush}" />
         </Button>
     </StackPanel>
 </UserControl>

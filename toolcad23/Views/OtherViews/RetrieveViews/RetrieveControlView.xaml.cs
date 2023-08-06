@@ -57,12 +57,12 @@ namespace toolcad23.Views.OtherViews.RetrieveViews
 
         private void Randomize()
         {
-            //if ((bool)SwapToggle.IsChecked)
-            //{
-            //    var val = rand.Next(0, 2);
-            //    Grid.SetColumn(RedStandGrid, val);
-            //    Grid.SetColumn(GreenStandGrid, Math.Abs(val - 1));
-            //}
+            if ((bool)SwapToggle.IsChecked)
+            {
+                var val = rand.Next(0, 2);
+                Grid.SetColumn(RedStandGrid, val);
+                Grid.SetColumn(GreenStandGrid, Math.Abs(val - 1));
+            }
         }
     }
 }

@@ -1,5 +1,7 @@
-﻿using Prism.Commands;
+﻿using Abdrakov.Engine.MVVM;
+using Prism.Commands;
 using Prism.Mvvm;
+using Prism.Regions;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -9,11 +11,13 @@ using toolcad23.Models.Helpers;
 
 namespace toolcad23.ViewModels
 {
-    internal class DeliveryPageViewModel : BindableBase
+    internal class DeliveryPageViewModel : ViewModelBase
     {
         private readonly DeliveryPageModel model;
         public ReadOnlyObservableCollection<BitmapImage> QRCodeImages => model.QRCodeImages;
         public ReadOnlyObservableCollection<string> QRCodeTexts => model.QRCodeTexts;
+
+        public override bool IsNavigationTarget(NavigationContext navigationContext) => true;
 
         public int YellowText
         {
